@@ -90,4 +90,10 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     });
   });
-  
+  const inputTel = document.getElementById('numerocontato');
+
+// Função para validar e formatar o telefone
+inputTel.addEventListener('input', function() {
+    // Substitui qualquer caractere que não seja número ou +
+    this.value = this.value.replace(/[^0-9+]/g, '');
+});

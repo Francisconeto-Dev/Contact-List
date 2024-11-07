@@ -24,7 +24,7 @@
                     <label for="nomecontato">Name</label>
                 </div>
                 <div class="input-group">
-                    <input id="numerocontato" type="tel" required min="0">
+                    <input id="numerocontato" pattern="[\+]?[0-9]{1,15}" maxlength="12"  type="tel" required min="0">
                     <label for="numerocontato">Number</label>
                 </div>
                 <div class="input-group">
