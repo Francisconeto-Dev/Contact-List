@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
       input.addEventListener('input', function() {
         if (this.value.trim() !== "") {
           // Quando o input não estiver vazio, aplicamos a transformação
-          label.style.transform = 'translateY(-7px)';
+          label.style.transform = 'translateY(7px)';
           label.style.fontSize = '15px';
           label.style.color = '#ffffff';
           label.style.top = '-17px';
