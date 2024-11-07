@@ -48,3 +48,46 @@ function adicionarLinha() {
         alert(`Contato ${nomeContato.value} adicionado com sucesso!`);
     }
 }
+document.addEventListener("DOMContentLoaded", function() {
+    const inputs = document.querySelectorAll('input');
+    
+    inputs.forEach(input => {
+      const label = input.nextElementSibling;  // Assumindo que o label está logo após o input
+  
+      // Função para verificar se o campo está preenchido ou não
+      input.addEventListener('input', function() {
+        if (this.value.trim() !== "") {
+          // Quando o input não estiver vazio, aplicamos a transformação
+          label.style.transform = 'translateY(-7px)';
+          label.style.fontSize = '15px';
+          label.style.color = '#ffffff';
+          label.style.top = '-17px';
+        } else {
+          // Quando o input estiver vazio, revertendo a transformação
+          label.style.transform = 'translateY(0)';
+          label.style.fontSize = '16px';
+          label.style.color = '#000000';
+          label.style.top = '20px';
+        }
+      });
+  
+      // Função para subir o label quando o input recebe foco
+      input.addEventListener('focus', function() {
+        label.style.transform = 'translateY(7px)';
+        label.style.fontSize = '15px';
+        label.style.color = '#ffffff';
+        label.style.top = '-17px';
+      });
+  
+      // Função para garantir que o label desça quando o campo perder o foco e estiver vazio
+      input.addEventListener('blur', function() {
+        if (this.value.trim() === "") {
+          label.style.transform = 'translateY(0)';
+          label.style.fontSize = '16px';
+          label.style.color = '#000000';
+          label.style.top = '20px';
+        }
+      });
+    });
+  });
+  
