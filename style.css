@@ -159,7 +159,7 @@ table td {
 }
 
 table th {
-    background-color: #4971778a;
+    background-color: transparent;
     color: #fff;
     font-size: 1em;
     font-weight: bold;
@@ -186,10 +186,6 @@ footer {
     border-top: 1px solid #ddd;
 }
 @media (max-width: 600px) {
-    body{
-        display: flex;
-        flex-wrap: wrap;
-    }
     form {
         padding: 15px;
         box-shadow: none; /* Remove a sombra em dispositivos móveis */
