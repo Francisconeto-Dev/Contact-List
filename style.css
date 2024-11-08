@@ -186,6 +186,10 @@ footer {
     border-top: 1px solid #ddd;
 }
 @media (max-width: 600px) {
+    body{
+        display: flex;
+        flex-wrap: wrap;
+    }
     form {
         padding: 15px;
         box-shadow: none; /* Remove a sombra em dispositivos móveis */
@@ -199,3 +203,4 @@ footer {
         font-size: 16px;
     }
 }
+
