@@ -81,6 +81,9 @@ document.addEventListener("DOMContentLoaded", function() {
   
       // Função para garantir que o label desça quando o campo perder o foco e estiver vazio
       input.addEventListener('blur', function() {
+
+        this.value = this.value.trim();
+
         if (this.value.trim() === "") {
           label.style.transform = 'translateY(0)';
           label.style.fontSize = '16px';
